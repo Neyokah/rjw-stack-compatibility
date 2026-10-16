@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <GameRoot Condition="'$(GameRoot)' == ''">$(RIMWORLD_ROOT)</GameRoot>
+    <Workshop Condition="'$(Workshop)' == ''">$(RIMWORLD_WORKSHOP)</Workshop>
+    <GameDir Condition="'$(GameDir)' == ''">$(RIMWORLD_MANAGED_DIR)</GameDir>
+    <GameDir Condition="'$(GameDir)' == '' And Exists('$(GameRoot)/RimWorld.app/Contents/MacOS/Assembly-CSharp.dll')">$(GameRoot)/RimWorld.app/Contents/MacOS</GameDir>
+    <GameManagedDir Condition="'$(GameManagedDir)' == ''">$(GameDir)</GameManagedDir>
+    <RjwDir Condition="'$(RjwDir)' == ''">$(RJW_ASSEMBLIES)</RjwDir>
+    <RjwDir Condition="'$(RjwDir)' == '' And '$(GameRoot)' != ''">$(GameRoot)/Mods/rjw/1.6/Assemblies</RjwDir>
+    <HarmonyPath Condition="'$(HarmonyPath)' == ''">$(HARMONY_DLL)</HarmonyPath>
+    <HarmonyPath Condition="'$(HarmonyPath)' == '' And '$(Workshop)' != ''">$(Workshop)/2009463077/1.7/Assemblies/0Harmony.dll</HarmonyPath>
+    <CecilPath Condition="'$(CecilPath)' == ''">$(MONO_CECIL_DLL)</CecilPath>
+    <Deterministic>true</Deterministic>
+    <BaseIntermediateOutputPath Condition="'$(REPO_BUILD_SCRATCH)' != ''">$(REPO_BUILD_SCRATCH)/$(MSBuildProjectName)/obj/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>

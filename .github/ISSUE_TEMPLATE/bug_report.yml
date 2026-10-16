@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a reproducible problem in RJW Stack Compatibility.
+title: "[Bug]: "
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Game and mod versions
+      description: Include the exact RimWorld build, this mod version, and relevant dependency versions.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Explain the smallest setup and steps that reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log excerpt
+      description: Remove personal paths and credentials. State whether it reproduces with only required dependencies.
+      render: text

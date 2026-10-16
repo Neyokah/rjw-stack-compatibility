@@ -1,0 +1,6 @@
+Game reference: Assembly-CSharp, Version=1.7.9784.3272, Culture=neutral, PublicKeyToken=null
+Game reference: UnityStubs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Game reference: Waylith.UnityCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Synthetic uncached lookup comparison (40000 repetitions, 500 groups): baseline 45.38 ms / 3840912 bytes; indexed 0.45 ms / 0 bytes. Not a game TPS benchmark.
+Actual RJW helper comparison passed for 250 requests using 500 installed-type group fixtures.
+PASS 5289 checks using installed 1.7 game/Harmony references and installed RFG/RJW binaries.
